@@ -1,0 +1,31 @@
+@font-face {
+  font-family: Sacramento;
+  src: url("../fonts/Sacramento-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: m200;
+  src: url("../fonts/Montserrat-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: m400;
+  src: url("../fonts/Montserrat-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: m700;
+  src: url("../fonts/Montserrat-Bold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+strong {
+  font-family: "m700";
+}
