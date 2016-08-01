@@ -13,11 +13,10 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer container" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', '_portfolio' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', '_portfolio' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', '_portfolio' ), '_portfolio', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+			<?php // printf( esc_html__( 'Theme: %1$s by %2$s.', '_portfolio' ), '_portfolio', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+			<p>Made with love by Brittany Renee Mayes | Copyright &copy; 2016</p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

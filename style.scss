@@ -477,14 +477,17 @@ header {
 	padding: 15px 0;
 
 	#site-branding {
-		max-width: 460px;
+		max-width: 500px;
 		margin: 35px 0;
 
 		h1.site-title {
-			font-family: "Sacramento";
+			font-family: 'Lora', serif;
 			font-size: 3rem;
 			text-decoration: none;
 			color: #000;
+			font-style: italic;
+			// text-transform: lowercase;
+			font-weight: 400;
 			a {
 				text-decoration: none;
 				color: #000;
