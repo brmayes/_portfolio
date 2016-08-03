@@ -37,6 +37,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Widgets
 # Content
 	## Posts and pages
+		### Thoughts
 	## Comments
 # Infinite scroll
 # Media
@@ -895,6 +896,38 @@ a:active {
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+### Thoughts
+--------------------------------------------------------------*/
+#page-thoughts .title {
+  text-transform: capitalize;
+  font-family: "Lora", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+#page-thoughts article .entry-title {
+  margin: 0 auto;
+}
+
+#page-thoughts article h2 a {
+  text-decoration: none;
+  color: black;
+  font-family: "Lora", sans-serif;
+  transition: all .4s;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+#page-thoughts article h2 a:hover {
+  color: #aaa;
+}
+
+#page-thoughts article .entry-meta {
+  font-family: "Lora", sans-serif;
 }
 
 /*--------------------------------------------------------------

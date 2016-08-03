@@ -11,56 +11,31 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<div id="page-thoughts">
+				<?php
+					$slug = basename(get_permalink());
+					echo '<h1 class="title">' . $slug . '</h1>';
 
-			<?php
-				$args = array ( 'category' => 3, 'posts_per_page' => 1);
-				$myposts = get_posts( $args );
-				foreach( $myposts as $post ) :  setup_postdata($post);
-				 ?>
+					$args = array(
+						'posts_per_page' =>4,
+						'cat' => 3,
+						'order' => 'DESC',
+						'orderby' => 'date'
+					);
+					$loop = new WP_Query( $args );
 
-				 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				 	<header class="entry-header">
-				 		<h1>hiiii</h1>
-				 		<?php
-				 			if ( is_single() ) {
-				 				the_title( '<h1 class="entry-title">', '</h1>' );
-				 			} else {
-				 				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-				 			}
+					if( $loop->have_posts() ) :
+						single_cat_title();
 
-				 		if ( 'post' === get_post_type() ) : ?>
-				 		<div class="entry-meta">
-				 			<?php _portfolio_posted_on(); ?>
-				 		</div><!-- .entry-meta -->
-				 		<?php
-				 		endif; ?>
-				 	</header><!-- .entry-header -->
+					while( $loop->have_posts() ) : $loop->the_post();
+						get_template_part( 'template-parts/content-thoughts' );
 
-				 	<div class="entry-content">
-				 		<?php
-				 			the_content( sprintf(
-				 				/* translators: %s: Name of current post. */
-				 				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', '_portfolio' ), array( 'span' => array( 'class' => array() ) ) ),
-				 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-				 			) );
+					endwhile;
 
-				 			wp_link_pages( array(
-				 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_portfolio' ),
-				 				'after'  => '</div>',
-				 			) );
-				 		?>
-				 	</div><!-- .entry-content -->
-
-				 	<footer class="entry-footer">
-				 		<?php _portfolio_entry_footer(); ?>
-				 	</footer><!-- .entry-footer -->
-				 </article><!-- #post-## -->
-
-			<?php endforeach; ?>
-
-			<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
-			<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
-
+					endif;
+					wp_reset_postdata();
+				?>
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
