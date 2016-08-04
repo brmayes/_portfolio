@@ -17,7 +17,7 @@ get_header(); ?>
 					echo '<h1 class="title">' . $slug . '</h1>';
 
 					$args = array(
-						'posts_per_page' =>4,
+						'posts_per_page' =>100,
 						'cat' => 3,
 						'order' => 'DESC',
 						'orderby' => 'date'
