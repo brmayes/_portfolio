@@ -39,6 +39,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Widgets
 # Content
 	## Posts and pages
+		### Work
 		### Thoughts
 	## Comments
 # Infinite scroll
@@ -969,6 +970,24 @@ ul.page-numbers li {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+/*--------------------------------------------------------------
+### Work
+--------------------------------------------------------------*/
+#page-work {
+	.post {
+		max-width: 30%;
+		float: left;
+
+		&:nth-child(3n+1), &:nth-child(3n+2) {
+			margin-right: 5%;
+		}
+	}
+
+	.portoflio-thumnails {
+		float: left;
+	}
+
 }
 /*--------------------------------------------------------------
 ### Thoughts
