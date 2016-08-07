@@ -975,17 +975,25 @@ ul.page-numbers li {
 ### Work
 --------------------------------------------------------------*/
 #page-work {
+	// .post {
+	// 	max-width: 30%;
+	// 	float: left;
+	//
+	// 	&:nth-child(3n+1), &:nth-child(3n+2) {
+	// 		margin-right: 5%;
+	// 	}
+	// }
+	//
+	// .portoflio-thumnails {
+	// 	float: left;
+	// }
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
 	.post {
-		max-width: 30%;
-		float: left;
-
-		&:nth-child(3n+1), &:nth-child(3n+2) {
-			margin-right: 5%;
-		}
-	}
-
-	.portoflio-thumnails {
-		float: left;
+		width: 30%;
 	}
 
 }
