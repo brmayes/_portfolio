@@ -964,6 +964,7 @@ ul.page-numbers li {
 }
 
 #page-work div.toggle {
+  outline: none;
   display: none;
   display: flex;
   flex-wrap: wrap;
