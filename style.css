@@ -971,12 +971,15 @@ ul.page-numbers li {
 #page-work div.toggle {
   outline: none;
   display: none;
+}
+
+#page-work div.posts-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-#page-work div.toggle .post {
+#page-work div.posts-container .post {
   width: 30%;
 }
 

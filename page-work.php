@@ -18,76 +18,82 @@ get_header(); ?>
 					<li class="trigger"><a href="#box3">Interactive Media</a></li>
 				</ul>
 				<div class ="toggle" id="box1">
-					<?php
-						$args = array(
-							'posts_per_page' =>100,
-							'cat' => 2,
-							'order' => 'DESC',
-							'orderby' => 'date'
-						);
-						$loop = new WP_Query( $args );
+					<div class="posts-container">
+						<?php
+							$args = array(
+								'posts_per_page' =>100,
+								'cat' => 2,
+								'order' => 'DESC',
+								'orderby' => 'date'
+							);
+							$loop = new WP_Query( $args );
 
-						if( $loop->have_posts() ) :
-							single_cat_title();
+							if( $loop->have_posts() ) :
+								single_cat_title();
 
-						while( $loop->have_posts() ) : $loop->the_post();
-							get_template_part( 'template-parts/content-work' );
+							while( $loop->have_posts() ) : $loop->the_post();
+								get_template_part( 'template-parts/content-work' );
 
-						endwhile;
+							endwhile;
 
-						endif;
-						wp_reset_postdata();
-					?>
+							endif;
+							wp_reset_postdata();
+						?>
+					</div>
 				</div>
 
 				<div class ="toggle" id="box2">
-					<?php
-						$tag = 'graphic-design';
-						$args = array(
-							'posts_per_page' =>100,
-							'cat' => 2,
-							'order' => 'DESC',
-							'orderby' => 'date',
-							'tag' => 'graphic-design'
-						);
-						$loop = new WP_Query( $args );
+					<div class="posts-container">
+						<?php
+							$tag = 'graphic-design';
+							$args = array(
+								'posts_per_page' =>100,
+								'cat' => 2,
+								'order' => 'DESC',
+								'orderby' => 'date',
+								'tag' => 'graphic-design'
+							);
+							$loop = new WP_Query( $args );
 
-						if( $loop->have_posts() ) :
-							single_cat_title();
+							if( $loop->have_posts() ) :
+								single_cat_title();
 
-						while( $loop->have_posts() ) : $loop->the_post();
-							get_template_part( 'template-parts/content-work' );
+							while( $loop->have_posts() ) : $loop->the_post();
+								get_template_part( 'template-parts/content-work' );
 
-						endwhile;
+							endwhile;
 
-						endif;
-						wp_reset_postdata();
-					?>
+							endif;
+							wp_reset_postdata();
+						?>
+					</div>
 				</div>
 
 				<div class ="toggle" id="box3">
-					<?php
-						$tag = 'interactive-media';
-						$args = array(
-							'posts_per_page' =>100,
-							'cat' => 2,
-							'order' => 'DESC',
-							'orderby' => 'date',
-							'tag' => $tag
-						);
-						$loop = new WP_Query( $args );
+					<div class="posts-container">
+						<?php
+							$tag = 'interactive-media';
+							$args = array(
+								'posts_per_page' =>100,
+								'cat' => 2,
+								'order' => 'DESC',
+								'orderby' => 'date',
+								'tag' => $tag
+							);
+							$loop = new WP_Query( $args );
 
-						if( $loop->have_posts() ) :
-							single_cat_title();
+							if( $loop->have_posts() ) :
+								single_cat_title();
 
-						while( $loop->have_posts() ) : $loop->the_post();
-							get_template_part( 'template-parts/content-work' );
+							while( $loop->have_posts() ) : $loop->the_post();
+								get_template_part( 'template-parts/content-work' );
 
-						endwhile;
+							endwhile;
 
-						endif;
-						wp_reset_postdata();
-					?>
+							endif;
+							wp_reset_postdata();
+						?>
+					</div>
 				</div>
 
 				<script type="text/javascript">
