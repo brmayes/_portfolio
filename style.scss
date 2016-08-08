@@ -975,6 +975,10 @@ ul.page-numbers li {
 ### Work
 --------------------------------------------------------------*/
 #page-work {
+	ul {
+		margin: 0;
+		padding: 0;
+	}
 	li {
 		list-style-type: none;
 		display: inline-block;

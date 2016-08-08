@@ -13,9 +13,9 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<div id="page-work">
 				<ul>
-					<li class="trigger"><a href="#box1"> Heading 1</a></li>
-					<li class="trigger"><a href="#box2"> Heading 2</a></li>
-					<li class="trigger"><a href="#box3"> Heading 3</a></li>
+					<li class="trigger"><a href="#box1">All</a></li>
+					<li class="trigger"><a href="#box2">Graphic Design</a></li>
+					<li class="trigger"><a href="#box3">Interactive Media</a></li>
 				</ul>
 				<div class ="toggle" id="box1">
 					<?php
@@ -95,8 +95,8 @@ get_header(); ?>
 						$("a").click(function($e){
 							$e.preventDefault();
 						   var myelement = $(this).attr("href")
-							 	$(myelement).fadeOut("slow");
-						    $(myelement).fadeIn("slow");
+							 	$(myelement).fadeOut( 1200 );
+						    $(myelement).fadeIn( 1200 );
 						    $(".toggle:visible").not(myelement).hide();
 						});
 					});
