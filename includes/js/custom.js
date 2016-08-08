@@ -7,5 +7,9 @@
 jQuery(function ($) {
   $( document ).ready(function() {
       console.log( "ready!" );
+
+    // $("body").click(function() {
+    //   $("body").fadeOut( "slow" );
+    // });
   });
 });

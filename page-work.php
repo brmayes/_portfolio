@@ -12,29 +12,46 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<div id="page-work">
-				<?php
-					$slug = basename(get_permalink());
-					// echo '<h1 class="title">' . $slug . '</h1>';
+				<div class="buttons">
+				<a id="showall">All</a>
+				<a class="showSingle" target="1">Div 1</a>
+				<a class="showSingle" target="2">Div 2</a>
+				<a class="showSingle" target="3">Div 3</a>
+				<a class="showSingle" target="4">Div 4</a>
+				</div>
 
-					$args = array(
-						'posts_per_page' =>100,
-						'cat' => 2,
-						'order' => 'DESC',
-						'orderby' => 'date'
-					);
-					$loop = new WP_Query( $args );
+				<div id="div1" class="targetDiv">Lorum Ipsum1</div>
+				<div id="div2" class="targetDiv">Lorum Ipsum2</div>
+				<div id="div3" class="targetDiv">Lorum Ipsum3</div>
+				<div id="div4" class="targetDiv">Lorum Ipsum4</div>
 
-					if( $loop->have_posts() ) :
-						single_cat_title();
+				<script type="text/javascript">
+					jQuery(function($){
+					         jQuery('#showall').click(function(){
+					               jQuery('.targetDiv').show();
+					        });
+					        jQuery('.showSingle').click(function(){
+					              jQuery('.targetDiv').hide();
+					              jQuery('#div'+$(this).attr('target')).show();
+					        });
+					});
 
-					while( $loop->have_posts() ) : $loop->the_post();
-						get_template_part( 'template-parts/content-work' );
 
-					endwhile;
+				</script>
 
-					endif;
-					wp_reset_postdata();
-				?>
+				<!-- <script type="text/javascript">
+				function doSomething() {
+					console.log("hi");
+				    $.get("template-parts/graphic-design.php");
+				    return true;
+				}
+				</script> -->
+
+				<!-- <a href="#" onclick="doSomething();">Click Me!</a> -->
+
+
+
+
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
