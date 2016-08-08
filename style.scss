@@ -975,13 +975,24 @@ ul.page-numbers li {
 ### Work
 --------------------------------------------------------------*/
 #page-work {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	.work-container {
 
-	.post {
-		width: 30%;
 	}
+	li {
+		list-style-type: none;
+		display: inline-block;
+	}
+	div.toggle{
+		display: none;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		.post {
+			width: 30%;
+		}
+	}
+	#box1 {display: flex;}
 
 }
 /*--------------------------------------------------------------

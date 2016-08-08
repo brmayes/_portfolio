@@ -958,14 +958,24 @@ ul.page-numbers li {
 /*--------------------------------------------------------------
 ### Work
 --------------------------------------------------------------*/
-#page-work {
+#page-work li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+#page-work div.toggle {
+  display: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-#page-work .post {
+#page-work div.toggle .post {
   width: 30%;
+}
+
+#page-work #box1 {
+  display: flex;
 }
 
 /*--------------------------------------------------------------
