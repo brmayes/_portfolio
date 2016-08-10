@@ -977,24 +977,41 @@ ul.page-numbers li {
   display: none;
 }
 
+#page-work div.portfolio-space {
+  margin-top: 2rem;
+}
+
 #page-work div.posts-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
+#page-work div.posts-container img {
+  width: 100%;
+}
+
 #page-work div.posts-container .post {
   width: 30%;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 992px) {
+  #page-work div.posts-container header {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 786px) {
   #page-work div.posts-container .post {
-    width: 100%;
+    width: 48%;
+  }
+  #page-work div.posts-container .hentry {
+    margin-bottom: 2%;
   }
 }
 
 @media screen and (max-width: 400px) {
-  #page-work div.posts-container img {
+  #page-work div.posts-container .post {
     width: 100%;
   }
 }

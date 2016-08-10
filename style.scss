@@ -995,29 +995,47 @@ ul.page-numbers li {
 		outline: none;
 		display: none;
 	}
+	div.portfolio-space {
+		margin-top: 2rem;
+	}
 	div.posts-container {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 
+		img {
+			width: 100%;
+		}
+
 		.post {
 			width: 30%;
+		}
 
-			@media screen and (max-width: $break-xsmall)  {
-				width: 100%;
+		@media screen and (max-width: $break-med)  {
+			header {
+				padding: 0;
+			}
+		}
+
+		@media screen and (max-width: $break-small)  {
+			.post {
+				width: 48%;
+			}
+			.hentry {
+				margin-bottom: 2%;
 			}
 		}
 
 		@media screen and (max-width: $break-xsmall)  {
-			img {
+			.post {
 				width: 100%;
 			}
 		}
 	}
+
 	#box1 {
 		display: flex;
 	}
-
 }
 /*--------------------------------------------------------------
 ### Thoughts
