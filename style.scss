@@ -24,6 +24,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Includes
+# Variables
 # Normalize
 # Typography
 # Elements
@@ -51,8 +52,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Includes
 --------------------------------------------------------------*/
-
 @import url("includes/css/fonts.css");
+
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+$break-xsmall: 400px; //below 400
+$break-small: 786px; //below 786
+$break-med: 992px; //above 992
+$break-large: 1200px; //above 1200
 
 /*--------------------------------------------------------------
 # Normalize
@@ -994,6 +1002,16 @@ ul.page-numbers li {
 
 		.post {
 			width: 30%;
+
+			@media screen and (max-width: $break-xsmall)  {
+				width: 100%;
+			}
+		}
+
+		@media screen and (max-width: $break-xsmall)  {
+			img {
+				width: 100%;
+			}
 		}
 	}
 	#box1 {
