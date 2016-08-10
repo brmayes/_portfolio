@@ -51,6 +51,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Includes
 --------------------------------------------------------------*/
 @import url("includes/css/fonts.css");
+@import url("includes/css/simple-line-icons.css");
 /*--------------------------------------------------------------
 # Variables
 --------------------------------------------------------------*/
@@ -557,6 +558,28 @@ header #site-navigation ul li:hover {
 header #social {
   flex-grow: 1;
   text-align: right;
+  font-family: "simple-line-icon";
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+header #social a {
+  text-decoration: none;
+  color: black;
+}
+
+header #social a:hover {
+  color: white;
+}
+
+header #social span {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 1.5%;
+}
+
+header #social span:hover {
+  background-color: #ccc;
 }
 
 /*--------------------------------------------------------------

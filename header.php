@@ -46,11 +46,11 @@
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 					</nav><!-- #site-navigation -->
 					<div id="social">
-						<a href="#"><img src="http://placehold.it/35x35"></a>
-						<a href="#"><img src="http://placehold.it/35x35"></a>
-						<a href="#"><img src="http://placehold.it/35x35"></a>
-						<a href="#"><img src="http://placehold.it/35x35"></a>
-					</div>
+						<a href="#"><span class="icon-social-github"></span></a>
+						<a href="#"><span class="icon-social-twitter"></span></a>
+						<a href="#"><span class="icon-envelope-letter"></span></a>
+						<!-- <a href="#"><span class="icon-social-github"></span></a> -->
+					</div> 
 				</div>
 			</header><!-- #masthead -->
 

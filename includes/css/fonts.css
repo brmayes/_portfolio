@@ -9,21 +9,21 @@
 
 @font-face {
   font-family: m200;
-  src: url("../fonts/Montserrat-Light.ttf");
+  src: url("../fonts/Montserrat/Montserrat-Light.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: m400;
-  src: url("../fonts/Montserrat-Regular.ttf");
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: m700;
-  src: url("../fonts/Montserrat-Bold.ttf");
+  src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
   font-weight: normal;
   font-style: normal;
 }
