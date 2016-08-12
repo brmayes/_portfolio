@@ -30,7 +30,7 @@
 	if( $tags ) : ?>
 	  <p class="tags">
 	  <?php foreach( $tags as $tag ) { ?>
-	   <span class="post-tag <?php echo $tag->slug; ?>"><i class="icon-tag"></i> <a href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a></span>
+	   <a href="<?php echo get_tag_link($tag->term_id); ?>"><span class="post-tag <?php echo $tag->slug; ?>"><i class="icon-tag"></i> <?php echo $tag->name; ?></span></a>
 	  <?php } ?>
 	</p>
 	<?php endif; ?>

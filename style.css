@@ -1000,19 +1000,20 @@ ul.page-numbers li {
   margin-left: 10px;
 }
 
+.tags a {
+  text-decoration: none;
+}
+
+.tags a:hover {
+  text-decoration: none;
+}
+
 .tags span.post-tag {
   font-size: 11px;
   border: 1px solid #ccc;
   padding: 3px 5px;
   border-radius: 5px;
-}
-
-.tags span.post-tag a {
-  text-decoration: none;
-}
-
-.tags span.post-tag a:hover {
-  text-decoration: none;
+  white-space: nowrap;
 }
 
 /*--------------------------------------------------------------
@@ -1045,6 +1046,10 @@ ul.page-numbers li {
 
 #page-work div.posts-container h2 {
   margin: 5px 0 0 0;
+}
+
+#page-work div.posts-container h2 a {
+  text-decoration: none;
 }
 
 #page-work div.posts-container img {

@@ -1023,19 +1023,19 @@ ul.page-numbers li {
 }
 
 .tags {
+	a {
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
 	span.post-tag {
 		font-size: 11px;
 		border: 1px solid #ccc;
 		padding: 3px 5px;
 		border-radius: 5px;
-
-		a {
-			text-decoration: none;
-
-			&:hover {
-				text-decoration: none;
-			}
-		}
+		white-space: nowrap;
 	}
 }
 /*--------------------------------------------------------------
@@ -1064,6 +1064,8 @@ ul.page-numbers li {
 
 		h2 {
 			margin: 5px 0 0 0;
+
+			a { text-decoration: none; }
 		}
 
 		img {
