@@ -19,7 +19,9 @@ get_header(); ?>
 
 			the_post_navigation( array(
             'prev_text' => __( '<span class="icon-arrow-left"></span>%title' ),
-            'next_text' => __( '%title<span class="icon-arrow-right"></span>' )
+            'next_text' => __( '%title<span class="icon-arrow-right"></span>' ),
+						'in_same_term'       => true,
+						'taxonomy'           => 'category'
         ) );
 
 			// If comments are open or we have at least one comment, load up the comment template.
