@@ -567,19 +567,21 @@ header {
 		a {
 			text-decoration: none;
 			color: black;
+			transition: all 0.4s;
 
 			&:hover {
 				color: white;
 			}
-		}
 
-		span {
-			background-color: white;
-			border: 1px solid #ccc;
-			padding: 1.5%;
+			span {
+				background-color: white;
+				border: 1px solid #ccc;
+				padding: 1.5%;
+				color: inherit;
 
-			&:hover {
-				background-color: #ccc;
+				&:hover {
+					background-color: #ccc;
+				}
 			}
 		}
   }

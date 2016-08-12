@@ -566,19 +566,21 @@ header #social {
 header #social a {
   text-decoration: none;
   color: black;
+  transition: all 0.4s;
 }
 
 header #social a:hover {
   color: white;
 }
 
-header #social span {
+header #social a span {
   background-color: white;
   border: 1px solid #ccc;
   padding: 1.5%;
+  color: inherit;
 }
 
-header #social span:hover {
+header #social a span:hover {
   background-color: #ccc;
 }
 
