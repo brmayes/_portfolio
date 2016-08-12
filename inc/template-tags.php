@@ -25,7 +25,7 @@ function _portfolio_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', '_portfolio' ),
+		esc_html_x( '%s', 'post date', '_portfolio' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
@@ -34,7 +34,9 @@ function _portfolio_posted_on() {
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+	// echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+	echo '<span class="posted-on">' . $posted_on; // WPCS: XSS OK.
+
 
 }
 endif;
@@ -48,9 +50,9 @@ function _portfolio_entry_footer() {
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', '_portfolio' ) );
-		if ( $categories_list && _portfolio_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', '_portfolio' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-		}
+		// if ( $categories_list && _portfolio_categorized_blog() ) {
+		// 	printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', '_portfolio' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+		// }
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', '_portfolio' ) );

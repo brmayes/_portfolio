@@ -1004,6 +1004,23 @@ ul.page-numbers li {
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+.nav-links {
+	a {
+		text-decoration: none;
+
+		span {
+			font-size: 13px;
+		}
+
+		span.icon-arrow-left {
+			margin-right: 10px;
+		}
+		span.icon-arrow-right {
+			margin-left: 10px;
+		}
+	}
+}
 /*--------------------------------------------------------------
 ### Work
 --------------------------------------------------------------*/

@@ -984,6 +984,22 @@ ul.page-numbers li {
   margin: 0 0 1.5em;
 }
 
+.nav-links a {
+  text-decoration: none;
+}
+
+.nav-links a span {
+  font-size: 13px;
+}
+
+.nav-links a span.icon-arrow-left {
+  margin-right: 10px;
+}
+
+.nav-links a span.icon-arrow-right {
+  margin-left: 10px;
+}
+
 /*--------------------------------------------------------------
 ### Work
 --------------------------------------------------------------*/
