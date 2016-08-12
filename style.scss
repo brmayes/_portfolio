@@ -1021,6 +1021,23 @@ ul.page-numbers li {
 		}
 	}
 }
+
+.tags {
+	span.post-tag {
+		font-size: 11px;
+		border: 1px solid #ccc;
+		padding: 3px 5px;
+		border-radius: 5px;
+
+		a {
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
 /*--------------------------------------------------------------
 ### Work
 --------------------------------------------------------------*/
@@ -1044,6 +1061,10 @@ ul.page-numbers li {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+
+		h2 {
+			margin: 5px 0 0 0;
+		}
 
 		img {
 			width: 100%;

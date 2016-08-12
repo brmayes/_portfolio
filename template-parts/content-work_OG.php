@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-
+		<?php // the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 		<?php if ( 'post' === get_post_type() ) : ?>
 
@@ -24,15 +24,5 @@
 
 	</a>
 
-	<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-	<?php $tags = get_the_tags();
-	if( $tags ) : ?>
-	  <p class="tags">
-	  <?php foreach( $tags as $tag ) { ?>
-	   <span class="post-tag <?php echo $tag->slug; ?>"><i class="icon-tag"></i> <a href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a></span>
-	  <?php } ?>
-	</p>
-	<?php endif; ?>
 
 </article><!-- #post-## -->

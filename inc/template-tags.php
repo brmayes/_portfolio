@@ -80,6 +80,7 @@ function _portfolio_entry_footer() {
 }
 endif;
 
+
 /**
  * Returns true if a blog has more than 1 category.
  *
