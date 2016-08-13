@@ -55,6 +55,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Variables
 --------------------------------------------------------------*/
+/* HSL */
+/* RGB */
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -67,6 +69,8 @@ html {
 
 body {
   margin: 0;
+  background: #fff;
+  /* Fallback for when there is no custom background color defined. */
 }
 
 article,
@@ -131,7 +135,7 @@ h1 {
 
 mark {
   background: #ff0;
-  color: #000;
+  color: #403D3A;
 }
 
 small {
@@ -365,8 +369,7 @@ html {
 }
 
 body {
-  background: #fff;
-  /* Fallback for when there is no custom background color defined. */
+  background: #F9FCFC;
 }
 
 blockquote:before,
@@ -493,19 +496,19 @@ header #site-branding h1.site-title {
   font-family: 'Lora', serif;
   font-size: 3rem;
   text-decoration: none;
-  color: #000;
+  color: #403D3A;
   font-style: italic;
   font-weight: 400;
 }
 
 header #site-branding h1.site-title a {
   text-decoration: none;
-  color: #000;
+  color: #403D3A;
 }
 
 header #site-branding h1.site-title:hover {
   text-decoration: none;
-  color: #000;
+  color: #403D3A;
 }
 
 header #site-branding #site-description {
@@ -538,7 +541,7 @@ header #site-navigation ul li {
 }
 
 header #site-navigation ul li a {
-  color: black;
+  color: #403D3A;
   text-decoration: none;
   transition: all 0.4s;
 }
@@ -565,7 +568,7 @@ header #social {
 
 header #social a {
   text-decoration: none;
-  color: black;
+  color: #403D3A;
   transition: all 0.4s;
 }
 
@@ -839,7 +842,7 @@ ul.page-numbers li {
 .page-numbers a:hover,
 .page-numbers.current,
 .page-numbers.current:hover {
-  color: #000;
+  color: #403D3A;
   background: #f7f7f7;
   text-decoration: none;
 }
@@ -1000,20 +1003,51 @@ ul.page-numbers li {
   margin-left: 10px;
 }
 
-.tags a {
+div.tags {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.tags a {
   text-decoration: none;
 }
 
-.tags a:hover {
+div.tags a:hover {
   text-decoration: none;
 }
 
-.tags span.post-tag {
+div.tags a.lang-javascript, div.tags a.lang-jquery, div.tags a.lang-a-frame, div.tags a.lang-ractive-js, div.tags a.lang-d3, div.tags a.lang-php {
+  order: 1;
+}
+
+div.tags a.lang-javascript span, div.tags a.lang-jquery span, div.tags a.lang-a-frame span, div.tags a.lang-ractive-js span, div.tags a.lang-d3 span, div.tags a.lang-php span {
+  background-color: #5d4954;
+}
+
+div.tags a.style-css-sass-less, div.tags a.style-design-ux-ui {
+  order: 2;
+}
+
+div.tags a.style-css-sass-less span, div.tags a.style-design-ux-ui span {
+  background-color: #754f5b;
+}
+
+div.tags a.process-data-wrangling {
+  order: 3;
+}
+
+div.tags a.process-data-wrangling span {
+  background-color: #7d6167;
+}
+
+div.tags span.post-tag {
   font-size: 11px;
   border: 1px solid #ccc;
   padding: 3px 5px;
   border-radius: 5px;
   white-space: nowrap;
+  color: #FFF3E7;
 }
 
 /*--------------------------------------------------------------
@@ -1045,11 +1079,18 @@ ul.page-numbers li {
 }
 
 #page-work div.posts-container h2 {
+  font-size: 1.15rem;
   margin: 5px 0 0 0;
 }
 
 #page-work div.posts-container h2 a {
   text-decoration: none;
+  color: #403D3A;
+  transition: all 0.4s;
+}
+
+#page-work div.posts-container h2 a:hover {
+  color: #999;
 }
 
 #page-work div.posts-container img {
@@ -1101,7 +1142,7 @@ ul.page-numbers li {
 
 #page-thoughts article h2 a {
   text-decoration: none;
-  color: black;
+  color: #403D3A;
   font-family: "Lora", sans-serif;
   transition: all .4s;
   font-size: 2rem;

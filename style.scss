@@ -63,6 +63,22 @@ $break-small: 786px; //below 786
 $break-med: 992px; //above 992
 $break-large: 1200px; //above 1200
 
+$black: #403D3A;
+
+/* HSL */
+$bone: hsla(30%, 31%, 86%, 1);
+$purple1: hsla(347%, 13%, 44%, 1);
+$purple3: hsla(341%, 19%, 38%, 1);
+$purple4: hsla(327%, 12%, 33%, 1);
+$purple5: hsla(321%, 13%, 25%, 1);
+
+/* RGB */
+$bone: rgba(230, 219, 208, 1);
+$purple2: rgba(125, 97, 103, 1);
+$purple3: rgba(117, 79, 91, 1);
+$purple4: rgba(93, 73, 84, 1);
+$purple5: rgba(73, 56, 67, 1);
+
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -74,6 +90,7 @@ html {
 
 body {
 	margin: 0;
+	background: #fff; /* Fallback for when there is no custom background color defined. */
 }
 
 article,
@@ -138,7 +155,7 @@ h1 {
 
 mark {
 	background: #ff0;
-	color: #000;
+	color: $black;
 }
 
 small {
@@ -373,7 +390,7 @@ html {
 }
 
 body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
+	background: #F9FCFC;
 }
 
 blockquote:before,
@@ -496,17 +513,17 @@ header {
 			font-family: 'Lora', serif;
 			font-size: 3rem;
 			text-decoration: none;
-			color: #000;
+			color: $black;
 			font-style: italic;
 			// text-transform: lowercase;
 			font-weight: 400;
 			a {
 				text-decoration: none;
-				color: #000;
+				color: $black;
 			}
 			&:hover {
 				text-decoration: none;
-				color: #000;
+				color: $black;
 			}
 		}
 
@@ -538,7 +555,7 @@ header {
         padding: 0 10px;
 
         a {
-          color: black;
+          color: $black;
           text-decoration: none;
           transition: all 0.4s;
 
@@ -566,7 +583,7 @@ header {
 
 		a {
 			text-decoration: none;
-			color: black;
+			color: $black;
 			transition: all 0.4s;
 
 			&:hover {
@@ -862,7 +879,7 @@ ul.page-numbers li {
 .page-numbers a:hover,
 .page-numbers.current,
 .page-numbers.current:hover {
-    color: #000;
+    color: $black;
     background: #f7f7f7;
     text-decoration: none;
 }
@@ -1022,20 +1039,55 @@ ul.page-numbers li {
 	}
 }
 
-.tags {
+div.tags {
+	margin-top: 8px;
+	display: flex;
+	flex-wrap: wrap;
+
 	a {
 		text-decoration: none;
 
 		&:hover {
 			text-decoration: none;
 		}
+
+		&.lang-javascript, &.lang-jquery, &.lang-a-frame, &.lang-ractive-js, &.lang-d3, &.lang-php {
+			order: 1;
+
+			span {
+				background-color: $purple4;
+			}
+		}
+
+		&.style-css-sass-less, &.style-design-ux-ui {
+			order: 2;
+
+			span {
+				background-color: $purple3;
+			}
+		}
+
+		&.process-data-wrangling {
+			order: 3;
+
+			span {
+				background-color: $purple2;
+			}
+		}
 	}
+
+
+
 	span.post-tag {
 		font-size: 11px;
 		border: 1px solid #ccc;
 		padding: 3px 5px;
 		border-radius: 5px;
 		white-space: nowrap;
+		color: #FFF3E7;
+
+
+
 	}
 }
 /*--------------------------------------------------------------
@@ -1063,9 +1115,18 @@ ul.page-numbers li {
 		justify-content: space-between;
 
 		h2 {
+			font-size: 1.15rem;
 			margin: 5px 0 0 0;
 
-			a { text-decoration: none; }
+			a {
+				text-decoration: none;
+				color: $black;
+				transition: all 0.4s;
+
+				&:hover {
+					color: #999;
+				}
+			}
 		}
 
 		img {
@@ -1120,7 +1181,7 @@ ul.page-numbers li {
 		}
 		h2 a {
 			text-decoration: none;
-			color: black;
+			color: $black;
 			font-family: "Lora", sans-serif;
 			transition: all .4s;
 			font-size: 2rem;

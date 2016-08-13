@@ -28,11 +28,15 @@
 
 	<?php $tags = get_the_tags();
 	if( $tags ) : ?>
-	  <p class="tags">
-	  <?php foreach( $tags as $tag ) { ?>
-	   <a href="<?php echo get_tag_link($tag->term_id); ?>"><span class="post-tag <?php echo $tag->slug; ?>"><i class="icon-tag"></i> <?php echo $tag->name; ?></span></a>
-	  <?php } ?>
-	</p>
+	  <div class="tags">
+		  <?php foreach( $tags as $tag ) { ?>
+		   <a href="<?php echo get_tag_link($tag->term_id); ?>" class="<?php echo $tag->slug; ?>">
+				 <span class="post-tag <?php echo $tag->slug; ?>">
+					 <i class="icon-tag"></i> <?php echo $tag->name; ?>
+				 </span>
+			 </a>
+		  <?php } ?>
+		</div>
 	<?php endif; ?>
 
 </article><!-- #post-## -->
