@@ -14,11 +14,11 @@ get_header(); ?>
 			<div id="page-work">
 				<header class="page-header">
 					<?php
-						the_archive_title( '<h1 class="page-title">', '</h1>' );
+						the_archive_title( '<h2 class="page-title">', '</h2>' );
 						the_archive_description( '<div class="taxonomy-description">', '</div>' );
 					?>
 				</header><!-- .page-header -->
-				<div class="posts-container">
+				<div class="posts-container tag-container">
 					<?php
 					if ( have_posts() ) : ?>
 
@@ -34,6 +34,15 @@ get_header(); ?>
 							get_template_part( 'template-parts/content-work', get_post_format() );
 
 						endwhile;
+
+						$postNum = $wp_query->post_count;
+
+						if ( ($postNum % 3) == 2 ) : ?>
+
+						<div class="post"></div>
+
+						<?php
+						endif;
 
 						the_posts_navigation();
 

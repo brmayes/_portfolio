@@ -25,8 +25,7 @@ function _portfolio_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( '%s', 'post date', '_portfolio' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		esc_html_x( '%s', 'post date', '_portfolio' ), $time_string 
 	);
 
 	$byline = sprintf(

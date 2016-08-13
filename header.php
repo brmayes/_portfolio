@@ -46,11 +46,10 @@
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 					</nav><!-- #site-navigation -->
 					<div id="social">
-						<a href="#"><span class="icon-social-github"></span></a>
-						<a href="#"><span class="icon-social-twitter"></span></a>
-						<a href="#"><span class="icon-envelope-letter"></span></a>
-						<!-- <a href="#"><span class="icon-social-github"></span></a> -->
-					</div> 
+						<a href="#" class="icon-social-github"></a>
+						<a href="#" class="icon-social-twitter"></a>
+						<a href="#" class="icon-envelope-letter"></a>
+					</div>
 				</div>
 			</header><!-- #masthead -->
 

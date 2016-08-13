@@ -14,7 +14,7 @@ get_header(); ?>
 			<div id="page-thoughts">
 				<?php
 					$slug = basename(get_permalink());
-					echo '<h1 class="title">' . $slug . '</h1>';
+					// echo '<h1 class="title">' . $slug . '</h1>';
 
 					$args = array(
 						'posts_per_page' =>100,
