@@ -785,15 +785,15 @@ a:active {
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
-  float: left;
+  float: right;
   width: 50%;
+  text-align: right;
 }
 
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
-  float: right;
-  text-align: right;
+  float: left;
   width: 50%;
 }
 
@@ -996,11 +996,11 @@ ul.page-numbers li {
   font-size: 13px;
 }
 
-.nav-links a span.icon-arrow-left {
+.nav-links a i.icon-arrow-left {
   margin-right: 10px;
 }
 
-.nav-links a span.icon-arrow-right {
+.nav-links a i.icon-arrow-right {
   margin-left: 10px;
 }
 

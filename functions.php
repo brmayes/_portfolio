@@ -116,6 +116,34 @@ function _portfolio_scripts() {
 }
 add_action( 'wp_enqueue_scripts', '_portfolio_scripts' );
 
+// Creates Movie Reviews Custom Post Type
+function portfolio_init() {
+    $args = array(
+      'label' => 'Portfolio',
+        'public' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'portfolio'),
+        'query_var' => true,
+        // 'menu_icon' => 'dashicons-video-alt',
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'trackbacks',
+            'custom-fields',
+            'comments',
+            'revisions',
+            'thumbnail',
+            'author',
+            'page-attributes')
+        );
+    register_post_type( 'portfolio', $args );
+}
+add_action( 'init', 'portfolio_init' );
+
+
 /**
  * Implement the Custom Header feature.
  */

@@ -8,8 +8,9 @@ jQuery(function ($) {
   $( document ).ready(function() {
       console.log( "ready!" );
 
-    // $("body").click(function() {
-    //   $("body").fadeOut( "slow" );
-    // });
+    $("a").click(function() {
+      $("#main").fadeOut( "slow" );
+      console.log('here');
+    });
   });
 });
