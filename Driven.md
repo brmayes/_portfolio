@@ -1,7 +1,7 @@
 _Driven
 ===
 
-<h1>Custom page templates and using jQuery</h1>
+<h2>Custom page templates and using jQuery</h2>
 
 <h3>To make a custom page template:</h3>
 1. Create a new page in WordPress. (For this, I'll call the new page 'slider')<br />
@@ -20,4 +20,3 @@ jQuery is built in with WordPress. To use jQuery on a single page, you can add i
     </script>
 
     </main><!-- #main -->
-  </div><!-- #primary -->
